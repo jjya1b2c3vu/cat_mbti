@@ -2,37 +2,94 @@
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.title{
+  margin-top:13.9%;
+  margin-left:6.3%;
+  margin-right:6.3%;
+  width: 87.5%;
+  height: 12.7%;
+  /* font-size: 2%; */
+}
+/* 홈페이지 css */
+.home {
+  margin-top:5.9%;
+  width: 328px;
+  height: 299px;
+  border-radius: 26px;
+  box-shadow: 0 3px 6px 0 #d5c5c5;
+  background-color: #fce9da;
+}
+.start_button {
+  margin-top:29px;
+  width: 328px;
+  height: 84px;
+  border-radius: 34px;
+  box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
+  background-color: #ffcec7;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* qna  css */
+.qustion {
+  width: 327px;
+  height: 84px;
+  border-radius: 34px;
+  box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
+  background-color: #fce9da;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
+
+div {
+  margin: 0 auto;
+}
+button {
+  border: 0;
+  outline: none !important;
+}
+.button1 {
+  grid-area: b1;
+  width: 158px;
+  height: 163px;
+  border-radius: 26px;
+  box-shadow: 0 3px 6px 0 rgba(11, 11, 11, 0.16);
+  background-color: #ffcec7;
+}
+.button2 {
+  grid-area: b2;
+  width: 158px;
+  height: 163px;
+  border-radius: 26px;
+  box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
+  background-color: #ffd0a6;
+}
+#grid {
+  margin-top:20px;
+  display: grid;
+  grid-template-columns: 1fr 160px 160px 1fr;
+  grid-template-areas: ". b1 b2 .";
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  justify-items: center; /* adjusted */
+}
+/* 결과페이지 */
+.result {
+  width: 322px;
+  height: 250px;
+  border-radius: 26px;
+  box-shadow: 0 3px 6px 0 #d5c5c5;
+  background-color: #fce9da;
 }
 
-.App-link {
-  color: #61dafb;
+.retry_button {
+  margin-top :20px;
+  width: 326px;
+  height: 76px;
+  border-radius: 26px;
+  box-shadow: 0 3px 6px 0 rgba(11, 11, 11, 0.16);
+  background-color: #ffd0a6;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
+
+
+
+
+
+
