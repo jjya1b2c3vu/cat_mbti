@@ -4,8 +4,7 @@ class Home extends Component {
     render(){
         return (
         <div>
-
-            <div className="home">
+            <div className="home" >
                 <p className="sub_title">나와 어울리는 냥 주인님 찾기</p>
                 <p>homepage</p>
             </div>

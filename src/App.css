@@ -8,83 +8,129 @@
   margin-right:6.3%;
   width: 87.5%;
   height: 12.7%;
-  /* font-size: 2%; */
+  animation: fade-in 0.5s ease-in-out;
+  font-family: 'Stylish', sans-serif;
+  font-size:35px;
+}
+button {
+  border: 0;
+  outline: none !important;
+  box-shadow:2px 2px 0 1px rgba(11, 11, 11, 0.16);
+  transition: box-shadow 0.3s ease, transform 0,3s ease;
+}
+button:active {
+  box-shadow: 0 0 0 rgba(11, 11, 11, 0.16),inset 0 4px 4px rgba(11, 11, 11, 0.16);
+  transform: translate(4px,4px);
 }
 /* 홈페이지 css */
 .home {
-  margin-top:5.9%;
+  margin-top:3%;
   width: 328px;
   height: 299px;
   border-radius: 26px;
   box-shadow: 0 3px 6px 0 #d5c5c5;
   background-color: #fce9da;
+  animation: fade-in 0.5s ease-in-out;
+  font-family: 'Poor Story', cursive;
+  font-size: 15px;
 }
 .start_button {
   margin-top:29px;
   width: 328px;
   height: 84px;
   border-radius: 34px;
-  box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
   background-color: #ffcec7;
+  animation: fade-in 0.5s ease-in-out;
+  font-family: 'Stylish', sans-serif;
+  font-size:25px;
 }
 
 /* qna  css */
 .qustion {
+  margin-top:3%;
   width: 327px;
   height: 84px;
   border-radius: 34px;
   box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
   background-color: #fce9da;
+  font-family: 'Poor Story', cursive;
 }
 
 
 div {
   margin: 0 auto;
 }
-button {
-  border: 0;
-  outline: none !important;
-}
+
+
 .button1 {
-  grid-area: b1;
-  width: 158px;
-  height: 163px;
+  /* grid-area: b1; */
+  /* width: 158px;
+  height: 163px; */
+  width: 327px;
+  height: 84px;
   border-radius: 26px;
-  box-shadow: 0 3px 6px 0 rgba(11, 11, 11, 0.16);
   background-color: #ffcec7;
+  visibility: visible;
+  /* margin-right:5px; */
+  font-family: 'Poor Story', cursive;
+  font-size:17px;
 }
+
 .button2 {
-  grid-area: b2;
-  width: 158px;
-  height: 163px;
+  margin-top:10px;
+  /* grid-area: b2; */
+  /* width: 158px;
+  height: 163px; */
+  width: 327px;
+  height: 84px;
   border-radius: 26px;
-  box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
   background-color: #ffd0a6;
+  /* margin-left:5px; */
+  font-family: 'Poor Story', cursive;
+  font-size:17px;
 }
-#grid {
+ #grid {
   margin-top:20px;
   display: grid;
-  grid-template-columns: 1fr 160px 160px 1fr;
-  grid-template-areas: ". b1 b2 .";
+  /* grid-template-columns: 1fr 160px 160px 1fr;
+  grid-template-areas: ". b1 b2 ."; */
   align-items: center;
-  justify-items: center; /* adjusted */
-}
+  justify-items: center; 
+} 
 /* 결과페이지 */
 .result {
-  width: 322px;
-  height: 250px;
+  width: 332px;
+  height: 550px;
+  padding:7px;
   border-radius: 26px;
   box-shadow: 0 3px 6px 0 #d5c5c5;
   background-color: #fce9da;
+  font-family: 'Poor Story', cursive;
+  font-size: 20px;
+}
+.result_text {
+  font-family: 'Poor Story', cursive;
+  font-size: 15px;
+}
+.result_img {
+  width: 190px;
+  height: 190px;
 }
 
 .retry_button {
   margin-top :20px;
-  width: 326px;
+  width: 345px;
   height: 76px;
   border-radius: 26px;
-  box-shadow: 0 3px 6px 0 rgba(11, 11, 11, 0.16);
+  /* box-shadow: 0 3px 6px 0 rgba(11, 11, 11, 0.16); */
   background-color: #ffd0a6;
+  font-family: 'Stylish', sans-serif;
+  font-size:25px;
+}
+
+.load {
+  margin-top: 10px;
+  font-family: 'Stylish', sans-serif;
 }
 
 
