@@ -160,6 +160,7 @@ div {
 }
 .copy_button {
     box-shadow: 0 0 0 0;
+    width:325px;
     background-color: #FFA98F;
     font-family: 'Stylish', sans-serif;
     font-size:25px;
