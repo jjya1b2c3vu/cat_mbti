@@ -1,5 +1,46 @@
 import React, { Component } from 'react';
 import { Circle } from 'rc-progress';
+
+class CopyClipboard extends React.Component {
+
+  constructor(props) {
+    super(props);
+    this.state = { copySuccess: '링크 복사' }
+  }
+
+  copyToClipboard = (e) => {
+    this.textArea.select();
+    document.execCommand('copy');
+    // This is just personal preference.
+    // I prefer to not show the the whole text area selected.
+    e.target.focus();
+    this.setState({ copySuccess: '복사 완료!' });
+  };
+
+  render() {
+    return (
+      <div id="copy">
+        <form>
+          <textarea className="text_area"
+            ref={(textarea) => this.textArea = textarea}
+            value='https://catmaster.netlify.app/'
+          />
+        </form>
+        {
+         /* Logical shortcut for only displaying the 
+            button if the copy command exists */
+         document.queryCommandSupported('copy') &&
+          <div>
+            <button onClick={this.copyToClipboard}
+                    className="copy_button"
+            >{this.state.copySuccess}</button> 
+          </div>
+        }
+      </div>
+    );
+  }
+
+}
 class Result extends Component {
   render(){
     var e=this.props.e;var i=this.props.i;
@@ -11,7 +52,7 @@ class Result extends Component {
       'ESTJ':'아메리칸컬',
       'ESFP':'터키쉬앙고라',
       'ESFJ':'셀커크렉스',
-      'ENFP':'싱가퓨라',
+      'ENFP':'싱가푸라',
       'ENFJ':'발리니즈',
       'ENTJ':'샴',
       'ENTP':'놀숲',
@@ -21,7 +62,7 @@ class Result extends Component {
       'INTP':'터키쉬반',
       'INFJ':'아비니시안',
       'INTJ':'브리티시숏헤어',
-      'ISTJ':'아메리카쇼트헤어',
+      'ISTJ':'아메리카숏헤어',
       'ISFJ':'페르시안'
     }
     var result_content = {
@@ -142,22 +183,22 @@ class Result extends Component {
               '계획력이 좋은 당신이 함께 해준다면 건강하게 서로에게 도움이 될 거예요.']
     }
     var result_img = {
-      'ESTP':'img/01.png',
-      'ESTJ':'img/02.png',
-      'ESFP':'img/03.png',
-      'ESFJ':'img/04.png',
-      'ENFP':'img/05.png',
-      'ENFJ':'img/06.png',
-      'ENTJ':'img/07.png',
-      'ENTP':'img/08.png',
-      // 'ISTP':'러시안블루',
-      // 'ISFP':'메이쿤',
-      // 'INFP':'버만',
-      // 'INTP':'터키쉬반',
-      // 'INFJ':'아비니시안',
-      // 'INTJ':'브리티시숏헤어',
-      // 'ISTJ':'아메리카쇼트헤어',
-      // 'ISFJ':'페르시안'
+      'ESTP':'img/뱅갈.png',
+      'ESTJ':'img/아메리칸컬.png',
+      'ESFP':'img/터키쉬앙고라.png',
+      'ESFJ':'img/셀커크렉스.png',
+      'ENFP':'img/싱가푸라.png',
+      'ENFJ':'img/발리니즈.png',
+      'ENTJ':'img/샴.png',
+      'ENTP':'img/놀숲.png',
+      'ISTP':'img/러시안블루.png',
+      'ISFP':'img/메이쿤.png',
+      'INFP':'img/버만.png',
+      'INTP':'img/터키쉬반.png',
+      'INFJ':'img/아비니시안.png',
+      'INTJ':'img/브리티시숏헤어.png',
+      'ISTJ':'img/아메리칸숏헤어.png',
+      'ISFJ':'img/페르시안.png'
     }
     var result=[];
     if (e>i)result.push('E');
@@ -176,10 +217,12 @@ class Result extends Component {
           <p>{result} ❤ {result_cat[result]}</p>
           <p className='result_text'>{result_content[result]}</p>
         </div>
+        <CopyClipboard></CopyClipboard>
         <button
          onClick={()=>window.location.reload(false)}
          className='retry_button'
          >한번 더하기</button>
+         
       </div>
     );
   }  
@@ -197,21 +240,21 @@ class Loading extends Component {
       this.setState({
         percent: this.state.percent +40
       })
-    }, 1000)
+    }, 800)
   )()
   _function2 = (() => 
     setTimeout(() => {
       this.setState({
         percent: this.state.percent +59
       })
-    }, 2000)
+    }, 1500)
   )()
   _function3 = (() => 
     setTimeout(() => {
       this.setState({
         percent: this.state.percent +1
       })
-    }, 2400)
+    }, 1800)
   )()
   render() {
     const { percent, color } = this.state;

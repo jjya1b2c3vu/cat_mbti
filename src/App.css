@@ -32,7 +32,11 @@ button:active {
   background-color: #fce9da;
   animation: fade-in 0.5s ease-in-out;
   font-family: 'Poor Story', cursive;
-  font-size: 15px;
+  font-size: 13px;
+}
+.produce {
+  margin-top:80px;
+  font-size: 10px;
 }
 .start_button {
   margin-top:29px;
@@ -100,7 +104,7 @@ div {
 /* 결과페이지 */
 .result {
   width: 332px;
-  height: 550px;
+  height: 560px;
   padding:7px;
   border-radius: 26px;
   box-shadow: 0 3px 6px 0 #d5c5c5;
@@ -113,12 +117,13 @@ div {
   font-size: 15px;
 }
 .result_img {
-  width: 190px;
-  height: 190px;
+  width: 220px;
+  height: 220px;
 }
 
 .retry_button {
-  margin-top :20px;
+  margin-top :15px;
+  margin-bottom : 10px;
   width: 345px;
   height: 76px;
   border-radius: 26px;
@@ -131,6 +136,33 @@ div {
 .load {
   margin-top: 10px;
   font-family: 'Stylish', sans-serif;
+}
+
+#copy {
+  margin-top: 15px;
+  width: 345px;
+  height: 76px;
+  border-radius: 26px;
+  /* box-shadow: 0 3px 6px 0 rgba(11, 11, 11, 0.16); */
+  background-color: #FFA98F;
+  font-family: 'Stylish', sans-serif;
+  box-shadow:2px 2px 0 1px rgba(11, 11, 11, 0.16);
+}
+.text_area{
+  margin-top: 10px;
+  width: 300px;
+  height:15px;
+  background-color: #FFA98F;
+  border: none;
+  text-align: center;
+  font-family: 'Inconsolata', monospace;
+  resize: none;
+}
+.copy_button {
+    box-shadow: 0 0 0 0;
+    background-color: #FFA98F;
+    font-family: 'Stylish', sans-serif;
+    font-size:25px;
 }
 
 
